@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            height: 100vh;
+            width: 100%;
+            background-image: url(images/food2.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+        }
+        .box2{
+            height: 100vh;
+            width: 100%;
+            background-image: url(images/pancake.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+        }
+        .box3{
+            height: 100vh;
+            width: 100%;
+            background-image: url(images/segg.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+        }
+        h2{
+            font-family: arial black;
+            font-size: 50px;
+            color: white;
+            margin:  0px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+    <div id="container" style="background-color: aquamarine; height: 600px;">
+        <button onclick="show()" id="btn">Show picture</button>
+        <button onclick="mode()" id="dark"> Theme</button>
+        <img id="reveal" src="images/food2.jpg" alt="" srcset="" style="display: none; width: 400px; height: 500px;">
+        
+    </div>
+
+    <div class="box1">
+        <h2>Dope Parallax</h2>
+    </div>
+    <div class="box2">
+        <h2>Dope Parallax</h2>
+    </div>
+    <div class="box3">
+        <h2>Dope Parallax</h2>
+    </div>
+    
+
+
+    
+    <script>
+        var img = document.getElementById("reveal");
+        var swap = document.getElementById("container")
+        function show(){
+            img.style="display: block; width:100%; height: 500px;";
+        }
+
+        function mode(){
+            swap.style="background-color: green; height: 600px";
+            
+        }
+    </script>
+    
+
+ 
+</body>
+</html>

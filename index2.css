@@ -1,0 +1,619 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    background-color:#f5f8fd;
+}
+.name{
+    float: left;
+    display: flex;
+    padding: 10px 0;
+}
+.name img{
+    width: 50px;
+    height: 50px;
+}
+.name img img{
+    width: 50px;
+    height: 30px;
+}
+.name h1{
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    padding-left: 5px;
+    font-size: 37px;
+}
+.name h5{
+    color: #fff;
+    font-family: sans-serif;
+    font-style: italic;
+    margin-top: 50px;
+    padding-top: 5px;
+}
+#chk{
+    display: block;
+    color: #ffff;
+    font-size: 20px;
+    float: right;
+}
+#menu, #close{
+    right: 5px;
+    color: #fff;
+}
+#chk:checked ~ .navbar{
+    margin-top: 0;
+}
+.nav-link{
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1111;
+}
+.navbar{
+    padding-top: 40px;
+    margin-top: -300px;
+    text-align: center;
+}
+.navbar ul{
+    text-align: center;
+}
+.navbar ul li{
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    padding:10px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;  
+    text-align: center;
+    padding-bottom: 10px;
+    transition: all .5s ease;
+}
+.navbar ul li.active a{
+    border-bottom: 2px solid greenyellow;
+    color: greenyellow;
+}
+.navbar ul li:hover a{
+    color: greenyellow;
+}
+
+#abt .fa{
+    padding-left: 5px;
+}
+.sub-menu{
+    display: none;
+}
+.navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.navbar ul li:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+.navbar ul li:hover .sub-menu ul li{
+    display: block;
+    margin: 10px;
+    width: 130px;
+    padding: 10px;
+    background: transparent;
+    text-align: left;
+}
+.navbar ul li:hover .sub-menu ul li a{
+    color: #fff;
+}
+.navbar ul li:hover .sub-menu ul li a:hover{
+    color: #b2ff00;
+}
+.sub-menu .fa-angle-right{
+    display: block;
+    float: right;
+    color:  #b2ff00;
+}
+
+.slide{
+    padding-top: 70px;
+}
+
+.gallery-img{
+    column-count: 3;
+}
+.gallery-img img{
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+}
+.gsec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.gsec .gcard{
+    position: relative;
+    width: 120px;
+    height: 150px;
+    transform-style: preserve-3d;
+    perspective: 350px;
+    margin: 30px;
+}
+.gsec .gcard .gbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
+.gsec .gcard:hover .gbox{
+    transform: rotateY(180deg);
+}
+.gsec .gcard .gbox .gimg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.gsec .gcard .gbox .gimg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+}
+.gsec .gcard .gbox .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+.gsec .gcard .gbox .content div{
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(to right, #fe0061, #ffeb3b);
+    transform: translateZ(100px);
+    width: 100px;
+    height: 80px;
+}
+.gsec .gcard .gbox .content div h2{
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: -13px;
+}
+.gsec .gcard .gbox .content div p{
+    color: #fff;
+    font-size: 10px;
+}
+
+
+.cuisines{
+    margin-top: 20px;
+}
+
+.food-items{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.food-items .item{
+    position: relative;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    place-content: center;
+    width: 150px;
+    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.food-items .item .img-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+.food-items .item:hover .img-box{
+    width: 150px;
+    height: 250px;
+    border-radius: 0 0  50% 0;
+    left: -75px;
+    top: calc(50% -75px);
+    transition: .5s ease-in-out;
+}
+.food-items .item .img-box:before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 700;
+}
+.food-items .item:hover .img-box:before{
+    opacity: 0;
+}
+.food-items .item .img-box img{
+    width: 150px;
+    height: 250px;
+    transition:  .5s ease-in-out;
+    border-radius: 5px;
+}
+.food-items .item:hover .img-box img{
+    width: 50px;
+    height: 100px;
+}
+.food-items .item .food-descr{
+    position: absolute;
+    right: 75px;
+    width: calc(100% - 120px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+}
+.food-items .item .food-descr h2{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.food-items .item .food-descr .order{
+    margin-top: 40px;
+    padding: 5px;
+}
+.food-items .item .food-descr a{
+    background: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+}
+.food-items .item .food-descr a:nth-child(2){
+    margin-top: 5px;
+}
+
+.food-categories{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.lunch{
+    height: 400px;
+    width: 200px;
+    background-color: teal;
+    box-shadow: 0 0 0 15 rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 50px;
+}
+.lunch img{
+    border-radius: 0 0 50% 0;
+    width: 100%;
+    height: 150px;
+}
+
+.text{
+    padding: 20px;
+}
+.text h1{
+    padding-bottom: 20px;
+    text-align: center;
+}
+.text .fa{
+    padding-left: 20px;
+}
+.text a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.text p{
+    padding-top: 20px;
+}
+
+
+.footer{
+    margin-top: 10%;
+    background: gray;
+}
+
+.end-title{
+    display: flex;
+    justify-content: center;
+    place-content: center;
+}
+.end{
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-count{
+    display: flex;
+    justify-content: center;
+    place-content: center;
+}
+.end-title img{
+    width: 50px;
+    height: 50px;
+    background: gray;
+}
+.end-title h2{
+    font-size: 40px;
+    padding-left: 10px;
+    color: #fff;
+}
+.end p .fa{
+    padding: 0 10px;
+}
+.end-contact a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+.end-contact a:hover{
+    color: greenyellow;
+}
+.icons{
+    padding: 20px;
+}
+.icons a{
+    color: #fff;
+    padding: 20px;
+}
+.icons a:hover{
+    color: greenyellow;
+}
+
+
+
+
+
+
+
+
+
+@media (width: 768px) {
+    .navbar{
+        float: left;
+        padding-left: 45px;
+        margin-top: -20px;
+    }
+    .navbar ul li{
+        padding-left:29px;
+    }
+
+    .navbar ul{
+        display: inline-flex;
+        padding: auto;
+        margin: auto;
+        font-size: 10px;
+    }
+    
+    .name img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .food-items{
+        position: relative;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+}
+@media (min-width: 1000){
+    .gsec{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        transform-style: preserve-3d;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .gsec .gcard{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        perspective: 350px;
+        margin: 30px;
+    }
+    .gsec .gcard .gbox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: 1s ease;
+    }
+    .gsec .gcard:hover .gbox{
+        transform: rotateY(180deg);
+    }
+    .gsec .gcard .gbox .gimg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .gsec .gcard .gbox .gimg img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .gsec .gcard .gbox .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #333;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        transform: rotateY(180deg);
+    }
+    .gsec .gcard .gbox .content div{
+        transform-style: preserve-3d;
+        padding: 20px;
+        background: linear-gradient(to right, #fe0061, #ffeb3b);
+        padding: 20px;
+        transform: translateZ(100px);
+    }
+    .gsec .gcard .gbox .content div h2{
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .gsec .gcard .gbox .content div p{
+        color: #fff;
+        font-size: 16px;
+    }
+    
+    
+    .cuisines{
+        margin-top: 20px;
+    }
+    
+    .food-items{
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+    .food-items .item{
+        position: relative;
+        height: 250px;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        place-content: center;
+        width: 250px;
+        margin: 20px;
+        border-radius: 5px;
+    }
+    .food-items .item .img-box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: .5s ease-in-out;
+    }
+    .food-items .item:hover .img-box{
+        width: 150px;
+        height: 150px;
+        border-radius: 0 0  50% 0;
+        left: -75px;
+        top: calc(50% -75px);
+        transition: .5s ease-in-out;
+    }
+    .food-items .item .img-box:before{
+        content: attr(data-text);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 4em;
+        color: rgba(255, 255, 255, .3);
+        font-weight: 700;
+    }
+    .food-items .item .img-box img{
+        width: 250px;
+        height: 250px;
+        transition:  .5s ease-in-out;
+        border-radius: 5px;
+    }
+    .food-items .item:hover .img-box img{
+        width: 250px;
+    }
+    .food-items .item .food-descr{
+        position: absolute;
+        right: 10px;
+        width: calc(100% - 120px);
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: start;
+    }
+    .food-items .item .food-descr h2{
+        margin-bottom: 5px;
+        font-size: 24px;
+    }
+    .food-items .item .food-descr .order{
+        margin-top: 40px;
+    
+    }
+    .food-items .item .food-descr a{
+        background: #333;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+    }
+    .food-items .item .food-descr a:nth-child(2){
+        margin-top: 10px;
+    }
+    .lunch:nth-child(2){
+        margin-top: 150px;
+    }
+}
